@@ -11,7 +11,7 @@ data <- subset(data, Date <= "2007-02-02" & Date >= "2007-02-01")
 data$newdate <- paste(data$Date, data$Time, sep = " ")
 data$newdate <- strptime(data$newdate, format="%Y-%m-%d %H:%M:%S")
 
-## convert
+## convert sub_metering to numeric
 data$Sub_metering_1 <- as.numeric(as.character(data$Sub_metering_1))
 data$Sub_metering_2 <- as.numeric(as.character(data$Sub_metering_2))
 data$Sub_metering_3 <- as.numeric(as.character(data$Sub_metering_3))
