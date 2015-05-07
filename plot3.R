@@ -15,7 +15,6 @@ data$newdate <- strptime(data$newdate, format="%Y-%m-%d %H:%M:%S")
 data$Sub_metering_1 <- as.numeric(as.character(data$Sub_metering_1))
 data$Sub_metering_2 <- as.numeric(as.character(data$Sub_metering_2))
 data$Sub_metering_3 <- as.numeric(as.character(data$Sub_metering_3))
-data[data == "?"] <- "NA"
 
 ##save graph "plot3"
 png(filename = "Plot3.png", width = 480, height = 480)
