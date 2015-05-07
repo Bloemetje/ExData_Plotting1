@@ -11,7 +11,7 @@ data <- subset(data, Date <= "2007-02-02" & Date >= "2007-02-01")
 data$newdate <- paste(data$Date, data$Time, sep = " ")
 data$newdate <- strptime(data$newdate, format="%Y-%m-%d %H:%M:%S")
 
-## convert
+## Convert Global_active_power to numeric.
 data$Global_active_power <- as.numeric(as.character(data$Global_active_power))
 
 ##save graph "plot2"
